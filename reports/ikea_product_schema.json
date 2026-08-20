@@ -1,0 +1,202 @@
+[
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "BILLY Bookcase",
+    "sku": "002.638.50",
+    "mpn": "00263850",
+    "brand": {
+      "@type": "Brand",
+      "name": "IKEA"
+    },
+    "description": "A simple unit can be enough storage for a limited space or the foundation for a larger storage solution if your needs change. Adjustable shelves; adapt space between shelves according to your needs. Surface made from natural wood veneer.",
+    "category": "Bookcases & Shelving",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.ikea.com/us/en/p/00263850/",
+      "priceCurrency": "USD",
+      "price": "79.99",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    },
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Color",
+        "value": "White"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Dimensions",
+        "value": "31 1/2x11x79 1/2 \""
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Material",
+        "value": "Particleboard"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "PO\u00c4NG Armchair",
+    "sku": "292.407.96",
+    "mpn": "29240796",
+    "brand": {
+      "@type": "Brand",
+      "name": "IKEA"
+    },
+    "description": "Layer-glued bent birch frame gives comfortable resilience. High back gives good support for your neck. A variety of cushion designs makes it easy to change the look of your PO\u00c4NG and your living room.",
+    "category": "Armchairs & Accent Chairs",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.ikea.com/us/en/p/29240796/",
+      "priceCurrency": "USD",
+      "price": "129.00",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    },
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Color",
+        "value": "Birch veneer/Knisa light beige"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Dimensions",
+        "value": "26 3/4x32 1/4x39 3/8 \""
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Material",
+        "value": "Layer-glued frame"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "KALLAX Shelf Unit",
+    "sku": "104.099.32",
+    "mpn": "10409932",
+    "brand": {
+      "@type": "Brand",
+      "name": "IKEA"
+    },
+    "description": "Standing or lying, against the wall or to divide the room \u2013 KALLAX series is eager to please and will adapt to your taste, space, budget and needs. Fine tune with drawers, shelves, boxes and inserts.",
+    "category": "Cube Storage & Room Dividers",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.ikea.com/us/en/p/10409932/",
+      "priceCurrency": "USD",
+      "price": "149.99",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    },
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Color",
+        "value": "Black-brown"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Dimensions",
+        "value": "57 7/8x57 7/8 \""
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Configuration",
+        "value": "4x4 16-Cube"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Material",
+        "value": "Particleboard"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "MALM Bed Frame, High",
+    "sku": "890.094.84",
+    "mpn": "89009484",
+    "brand": {
+      "@type": "Brand",
+      "name": "IKEA"
+    },
+    "description": "A clean design with solid wood veneer that is just as beautiful on all sides. Place the bed freestanding or with the headboard against a wall. Add spacious MALM bed storage boxes underneath.",
+    "category": "Beds & Bed Frames",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.ikea.com/us/en/p/89009484/",
+      "priceCurrency": "USD",
+      "price": "299.00",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    },
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Size",
+        "value": "Queen"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Color",
+        "value": "White stained oak veneer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Dimensions",
+        "value": "66 1/8x83 1/8x39 3/8 \""
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Material",
+        "value": "Wood veneer"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "STRANDMON Wing Chair",
+    "sku": "903.598.29",
+    "mpn": "90359829",
+    "brand": {
+      "@type": "Brand",
+      "name": "IKEA"
+    },
+    "description": "You can really relax and unwind in comfort, because the high back on this chair provides extra support for your neck. Classic 1950s look with modern comfort and durable tactile fabric.",
+    "category": "Living Room Seating",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.ikea.com/us/en/p/90359829/",
+      "priceCurrency": "USD",
+      "price": "279.00",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    },
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Color",
+        "value": "Nordvalla dark gray"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Dimensions",
+        "value": "32 1/4x37 3/4x39 3/4 \""
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Material",
+        "value": "Solid wood frame"
+      }
+    ]
+  }
+]

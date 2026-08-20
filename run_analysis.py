@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 CLI Runner for IKEA Brand Search Optimization Multi-Agent System.
-Implements the 4-Layer Multi-Surface Merchandising Architecture and computes exact Query Token Recall metrics.
+Implements the 4-Layer Multi-Surface Merchandising Architecture, computes exact Query Token Recall metrics,
+and exports full-stack deliverables (Markdown, HTML, Schema.org JSON-LD, Google Merchant Feed).
 """
 
 import argparse
@@ -20,6 +21,7 @@ from brand_search_optimization.tools.catalog_connector import (
 )
 from brand_search_optimization.tools.metrics import calculate_catalog_recall_metrics
 from brand_search_optimization.tools.report_exporter import export_brand_optimization_report
+from brand_search_optimization.tools.structured_data_generator import export_structured_data
 from brand_search_optimization.tools.web_search import get_top_search_results
 
 
@@ -64,8 +66,8 @@ def run_pipeline(brand: str = "IKEA", dry_run: bool = False, output_dir: str = "
     print("   ✅ [Critic Agent] Status: SATISFIED - Brand elegance preserved on D2C; search density mapped to SEO & Feeds.")
     print()
 
-    # Step 4: Metric Calculation & Report Compilation
-    print("🔹 [Step 4/4] Computing mathematical Query Recall Metrics and compiling report...")
+    # Step 4: Metric Calculation, Structured Data & Report Compilation
+    print("🔹 [Step 4/4] Computing mathematical Query Recall Metrics and exporting all deliverables...")
     
     # Load evaluation benchmark for quantitative scoring
     eval_file = Path(__file__).resolve().parent / "eval" / "eval_data.json"
@@ -86,6 +88,9 @@ def run_pipeline(brand: str = "IKEA", dry_run: bool = False, output_dir: str = "
     total_q = metric_results["total_queries_evaluated"]
 
     print(f"   📈 Metric Computed: Baseline Query Recall {baseline_pct}% → Optimized Query Recall {optimized_pct}% (+{uplift_pct}%)")
+
+    # Export Structured Data (Schema.org JSON-LD and Google Merchant Feed)
+    structured_paths = export_structured_data(products, output_dir=output_dir)
 
     report_markdown = f"""# 🛋️ Brand Search Optimization Report: {brand}
 
@@ -141,30 +146,19 @@ $$R_{{query}} = \\frac{{|\\text{{Tokens}}(\\text{{Shopper Search Query}}) \\cap 
 
 ---
 
-## 4. Technical Integration Architecture
+## 4. Full-Stack E-Commerce Deliverables
 
-```
-                                  ┌─── Layer 1: Next.js / React D2C UI (Clean 'BILLY')
-                                  │
-[IKEA Product Catalog] ───► [ADK] ┼─── Layer 2: Next.js Head / Metadata API (<title> tag)
-                                  │
-                                  ├─── Layer 3: Algolia / Elasticsearch Synonyms API
-                                  │
-                                  └─── Layer 4: Google Merchant Center / Amazon Feed (XML/CSV)
-```
-
-1. **Next.js / Frontend UI**: Consumes Layer 1 for clean visual rendering.
-2. **Metadata API (`generateMetadata`)**: Injects Layer 2 `<title>`, `<meta name="description">`, and `schema.org/Product` JSON-LD for search spiders.
-3. **Search Engine Indexer**: Posts Layer 3 synonym dictionaries to Algolia / Elasticsearch via REST API.
-4. **Feed Syndication Engine**: Exports Layer 4 high-density titles to Google Merchant Center and Amazon Marketplace feeds.
+The system automatically generates production-ready structured assets in `reports/`:
+- **`reports/ikea_product_schema.json`**: Compliant `schema.org/Product` JSON-LD code for web engineers to embed in the `<head>` of product pages.
+- **`reports/google_merchant_feed.tsv`**: Ready-to-import TSV feed file for Google Merchant Center & Google Shopping campaigns.
 
 ---
 
 ## 5. Strategic Merchandising Roadmap
 
 1. **Immediate (Phase 1)**: Ingest Layer 3 search synonyms into on-site search (Algolia/Elasticsearch) to instantly eliminate zero-result customer searches.
-2. **Short-Term (Phase 2)**: Update programmatic SEO templates with Layer 2 `<title>` and Schema.org metadata.
-3. **Scale (Phase 3)**: Deploy Layer 4 optimized feed titles to Google Shopping campaigns and monitor ROAS / CTR lift.
+2. **Short-Term (Phase 2)**: Inject generated Schema.org JSON-LD and Layer 2 `<title>` tags into frontend templates.
+3. **Scale (Phase 3)**: Deploy Layer 4 Google Merchant Center TSV feed to Google Shopping and Performance Max campaigns.
 
 ---
 *Report generated automatically by Google Agent Development Kit (ADK) Multi-Agent Architecture.*
@@ -174,8 +168,10 @@ $$R_{{query}} = \\frac{{|\\text{{Tokens}}(\\text{{Shopper Search Query}}) \\cap 
     print()
     print("=" * 80)
     print("🎉 MULTI-SURFACE PIPELINE COMPLETED SUCCESSFULLY!")
-    print(f"📄 Markdown Report: {paths['markdown_path']}")
-    print(f"🌐 HTML Report:     {paths['html_path']}")
+    print(f"📄 Markdown Report:      {paths['markdown_path']}")
+    print(f"🌐 HTML Report:          {paths['html_path']}")
+    print(f"🏷️  Schema.org JSON-LD:   {structured_paths['json_ld_path']}")
+    print(f"📦 Google Merchant Feed: {structured_paths['merchant_feed_path']}")
     print("=" * 80)
     return paths["markdown_path"]
 
