@@ -1,0 +1,7 @@
+# Ignore Python backend files from Vercel deployment so Vercel treats this as a static React app
+pyproject.toml
+run_analysis.py
+brand_search_optimization/
+tests/
+eval/
+data/
