@@ -3,14 +3,14 @@
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-adk--ikea--brand--analysis.vercel.app-0058a3?style=for-the-badge&logo=vercel&logoColor=white)](https://adk-ikea-brand-analysis.vercel.app/)
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![React 18](https://img.shields.io/badge/Frontend-React%2018%20%2B%20Highcharts-61DAFB.svg)](https://adk-ikea-brand-analysis.vercel.app/)
+[![React](https://img.shields.io/badge/Frontend-React%20%2B%20Highcharts-61DAFB.svg)](https://adk-ikea-brand-analysis.vercel.app/)
 [![Google ADK](https://img.shields.io/badge/Google-ADK%20(Agent%20Development%20Kit)-4285F4.svg)](https://github.com/google/adk-samples)
 [![Gemini 2.5 Flash](https://img.shields.io/badge/Model-Gemini%202.5%20Flash-orange.svg)](https://ai.google.dev/)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Tests: Passing](https://img.shields.io/badge/tests-12%20passed-brightgreen.svg)](tests/)
 
 > 🚀 **Live Interactive Web Application**: [**https://adk-ikea-brand-analysis.vercel.app/**](https://adk-ikea-brand-analysis.vercel.app/)  
-> *Explore the live React 18 + Highcharts dashboard, interactive 4-layer merchandising matrix, real-time search engine simulator, and Schema.org JSON-LD export directly in your browser.*
+> *Explore the live React + Highcharts dashboard, interactive 4-layer merchandising matrix, real-time search engine simulator, and Schema.org JSON-LD export directly in your browser.*
 
 ---
 
@@ -39,10 +39,10 @@ flowchart TD
     Pipeline --> L3[3. Search Synonyms]
     Pipeline --> L4[4. Marketplace / Ad Feeds]
 
-    L1 --- D1["IKEA.com Display: 'BILLY' + Subtitle 'Bookcase, white, 31x11x79\"'"]
-    L2 --- D2["HTML &lt;title&gt;: 'BILLY Bookcase (White, 79\") | Tall Bookshelf Storage | IKEA'"]
-    L3 --- D3["Elasticsearch Synonyms: ['bookshelf', 'tall white bookcase', 'adjustable shelf unit']"]
-    L4 --- D4["Google Shopping Feed: 'IKEA BILLY - 79\" Modern Bookshelf with Adjustable Shelves, White'"]
+    L1 --- D1["IKEA.com Display: BILLY - Bookcase, white, 31x11x79 in."]
+    L2 --- D2["HTML Title: BILLY Bookcase (White, 79 in.) - Tall Bookshelf Storage - IKEA"]
+    L3 --- D3["Elasticsearch Synonyms: bookshelf, tall white bookcase, adjustable shelf unit"]
+    L4 --- D4["Google Shopping Feed: IKEA BILLY - 79 in. Modern Bookshelf with Adjustable Shelves, White"]
 ```
 
 ---
