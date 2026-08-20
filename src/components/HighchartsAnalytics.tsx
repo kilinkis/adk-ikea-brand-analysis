@@ -4,10 +4,19 @@ import HighchartsReact from 'highcharts-react-official';
 import highchartsMore from 'highcharts/highcharts-more';
 import { Product } from '../types';
 
-// Initialize highcharts-more for polar/spider charts
-if (typeof Highcharts === 'object') {
-  (highchartsMore as unknown as (hc: typeof Highcharts) => void)(Highcharts);
-}
+// Initialize highcharts-more for polar/spider charts (supports both ESM and CJS bundling)
+const initHighchartsMore = (moreModule: unknown, hc: typeof Highcharts) => {
+  if (typeof moreModule === 'function') {
+    (moreModule as (h: typeof Highcharts) => void)(hc);
+  } else if (
+    moreModule &&
+    typeof (moreModule as { default?: (h: typeof Highcharts) => void }).default === 'function'
+  ) {
+    (moreModule as { default: (h: typeof Highcharts) => void }).default(hc);
+  }
+};
+
+initHighchartsMore(highchartsMore, Highcharts);
 
 interface HighchartsAnalyticsProps {
   products: Product[];
