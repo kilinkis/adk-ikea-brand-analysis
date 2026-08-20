@@ -202,30 +202,19 @@ $$R_{query} = \frac{|\text{Tokens}(\text{Shopper Search Query}) \cap \text{Token
 
 ---
 
-## 4. Technical Integration Architecture
+## 4. Full-Stack E-Commerce Deliverables
 
-```
-                                  ┌─── Layer 1: Next.js / React D2C UI (Clean 'BILLY')
-                                  │
-[IKEA Product Catalog] ───► [ADK] ┼─── Layer 2: Next.js Head / Metadata API (<title> tag)
-                                  │
-                                  ├─── Layer 3: Algolia / Elasticsearch Synonyms API
-                                  │
-                                  └─── Layer 4: Google Merchant Center / Amazon Feed (XML/CSV)
-```
-
-1. **Next.js / Frontend UI**: Consumes Layer 1 for clean visual rendering.
-2. **Metadata API (`generateMetadata`)**: Injects Layer 2 `<title>`, `<meta name="description">`, and `schema.org/Product` JSON-LD for search spiders.
-3. **Search Engine Indexer**: Posts Layer 3 synonym dictionaries to Algolia / Elasticsearch via REST API.
-4. **Feed Syndication Engine**: Exports Layer 4 high-density titles to Google Merchant Center and Amazon Marketplace feeds.
+The system automatically generates production-ready structured assets in `reports/`:
+- **`reports/ikea_product_schema.json`**: Compliant `schema.org/Product` JSON-LD code for web engineers to embed in the `<head>` of product pages.
+- **`reports/google_merchant_feed.tsv`**: Ready-to-import TSV feed file for Google Merchant Center & Google Shopping campaigns.
 
 ---
 
 ## 5. Strategic Merchandising Roadmap
 
 1. **Immediate (Phase 1)**: Ingest Layer 3 search synonyms into on-site search (Algolia/Elasticsearch) to instantly eliminate zero-result customer searches.
-2. **Short-Term (Phase 2)**: Update programmatic SEO templates with Layer 2 `<title>` and Schema.org metadata.
-3. **Scale (Phase 3)**: Deploy Layer 4 optimized feed titles to Google Shopping campaigns and monitor ROAS / CTR lift.
+2. **Short-Term (Phase 2)**: Inject generated Schema.org JSON-LD and Layer 2 `<title>` tags into frontend templates.
+3. **Scale (Phase 3)**: Deploy Layer 4 Google Merchant Center TSV feed to Google Shopping and Performance Max campaigns.
 
 ---
 *Report generated automatically by Google Agent Development Kit (ADK) Multi-Agent Architecture.*
