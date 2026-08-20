@@ -1,5 +1,6 @@
 """Unit tests for ADK agent definitions, tools, and report exporter."""
 
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -40,20 +41,18 @@ class TestAgentsAndTools(unittest.TestCase):
         self.assertIn("Bookcase", results)
 
     def test_report_exporter(self):
-        """Verifies report generation and export to markdown and HTML."""
+        """Verifies report generation and export using an isolated temporary directory."""
         sample_md = "# Sample Test Report\n\n- Testing report export."
-        paths = export_brand_optimization_report(sample_md, brand="IKEA_TEST", output_dir="reports/test_output")
-        
-        md_file = Path(paths["markdown_path"])
-        html_file = Path(paths["html_path"])
+        with tempfile.TemporaryDirectory() as temp_dir:
+            paths = export_brand_optimization_report(sample_md, brand="IKEA_TEST", output_dir=temp_dir)
+            
+            md_file = Path(paths["markdown_path"])
+            html_file = Path(paths["html_path"])
 
-        self.assertTrue(md_file.exists())
-        self.assertTrue(html_file.exists())
-
-        # Cleanup test files
-        md_file.unlink(missing_ok=True)
-        html_file.unlink(missing_ok=True)
-        Path(paths["latest_markdown_path"]).unlink(missing_ok=True)
+            self.assertTrue(md_file.exists())
+            self.assertTrue(html_file.exists())
+            self.assertIn("ikea_test_brand_optimization_report.md", md_file.name)
+            self.assertIn("ikea_test_brand_optimization_report.html", html_file.name)
 
 
 if __name__ == "__main__":

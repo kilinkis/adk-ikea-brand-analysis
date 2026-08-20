@@ -1,52 +1,52 @@
 [
   {
-    "eval_id": "eval-ikea-billy",
-    "brand": "IKEA",
     "product": "BILLY Bookcase",
-    "expected_keywords": [
-      "white bookshelf",
-      "adjustable shelves",
-      "tall bookcase",
-      "modern storage"
-    ],
-    "required_title_elements": [
-      "BILLY",
-      "Bookcase",
-      "79\"",
-      "Adjustable Shelves",
-      "White"
+    "original_meta": "BILLY Bookcase. A simple unit can be enough storage for a limited space or the foundation for a larger storage solution.",
+    "optimized_meta": "BILLY Bookcase (White, 79\") | Modern Tall Bookshelf Storage | IKEA. Synonyms: white bookshelf, tall bookcase, adjustable shelves, narrow book storage, living room shelving. Feed: IKEA BILLY - 79\" Modern Tall Bookshelf with Adjustable Storage Shelves, White.",
+    "test_queries": [
+      "79 inch tall white bookshelf with adjustable shelves",
+      "minimalist white bookcase for living room",
+      "narrow vertical book storage unit"
     ]
   },
   {
-    "eval_id": "eval-ikea-poang",
-    "brand": "IKEA",
     "product": "POÄNG Armchair",
-    "expected_keywords": [
-      "scandinavian lounge chair",
-      "bentwood accent chair",
-      "neck support"
-    ],
-    "required_title_elements": [
-      "POÄNG",
-      "Armchair",
-      "Bentwood",
-      "Lounge Chair"
+    "original_meta": "POÄNG Armchair. Layer-glued bent birch frame gives comfortable resilience.",
+    "optimized_meta": "POÄNG Armchair | Scandinavian Bentwood Lounge Chair | IKEA. Synonyms: scandinavian lounge chair, bentwood accent chair, high back reading chair, removable cushion armchair. Feed: IKEA POÄNG Armchair - Scandinavian Bentwood Accent Lounge Chair with Neck Support, Beige.",
+    "test_queries": [
+      "scandinavian bentwood lounge chair with neck support",
+      "ergonomic high-back reading accent chair",
+      "bent birch wood armchair with beige cushion"
     ]
   },
   {
-    "eval_id": "eval-ikea-kallax",
-    "brand": "IKEA",
     "product": "KALLAX Shelf Unit",
-    "expected_keywords": [
-      "cube storage organizer",
-      "16-cube",
-      "room divider shelf"
-    ],
-    "required_title_elements": [
-      "KALLAX",
-      "16-Cube",
-      "Modular Storage",
-      "Room Divider"
+    "original_meta": "KALLAX Shelf Unit. Standing or lying, against the wall or to divide the room.",
+    "optimized_meta": "KALLAX 16-Cube Shelf Unit (4x4) | Room Divider Storage | IKEA. Synonyms: cube storage organizer, 16 cube bookcase, 4x4 room divider, vinyl record storage shelf, square cubby. Feed: IKEA KALLAX Shelving Unit - 16-Cube (4x4) Modular Storage Organizer & Room Divider, 58x58\".",
+    "test_queries": [
+      "16 cube storage organizer room divider shelf",
+      "4x4 modular vinyl record display bookcase",
+      "square cubby storage unit for living room"
+    ]
+  },
+  {
+    "product": "MALM Bed Frame, High",
+    "original_meta": "MALM Bed Frame, High. A clean design with solid wood veneer that is just as beautiful on all sides.",
+    "optimized_meta": "MALM Queen Bed Frame (High) | Modern Platform Bed | IKEA. Synonyms: queen platform bed, wood veneer bed frame, underbed storage bed, modern headboard bed. Feed: IKEA MALM Queen Bed Frame - Clean-Lined High Platform Bed with Headboard, White Stained Oak.",
+    "test_queries": [
+      "queen size wooden platform bed frame with headboard",
+      "white stained oak bed with underbed storage",
+      "clean minimalist high platform queen bed"
+    ]
+  },
+  {
+    "product": "STRANDMON Wing Chair",
+    "original_meta": "STRANDMON Wing Chair. You can really relax and unwind in comfort, because the high back on this chair provides extra support for your neck.",
+    "optimized_meta": "STRANDMON Wing Chair | Classic High-Back Reading Chair | IKEA. Synonyms: high-back wingback chair, accent reading armchair, tufted lounge chair, dark gray fireside chair. Feed: IKEA STRANDMON Wing Chair - Classic High-Back Wingback Accent Chair with Deep Cushion, Dark Gray.",
+    "test_queries": [
+      "classic high back wingback accent chair dark gray",
+      "cozy fireside reading lounge chair with deep cushion",
+      "traditional tufted living room wing chair"
     ]
   }
 ]
