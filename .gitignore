@@ -53,3 +53,10 @@ screenshot_*.png
 *.swp
 *.swo
 .DS_Store
+
+# Node / Frontend
+node_modules/
+dist/
+.pnpm-debug.log*
+*.tsbuildinfo
+
