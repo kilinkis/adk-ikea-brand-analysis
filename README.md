@@ -4,7 +4,7 @@
 [![Google ADK](https://img.shields.io/badge/Google-ADK%20(Agent%20Development%20Kit)-4285F4.svg)](https://github.com/google/adk-samples)
 [![Gemini 2.5 Flash](https://img.shields.io/badge/Model-Gemini%202.5%20Flash-orange.svg)](https://ai.google.dev/)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Tests: Passing](https://img.shields.io/badge/tests-9%20passed-brightgreen.svg)](tests/)
+[![Tests: Passing](https://img.shields.io/badge/tests-12%20passed-brightgreen.svg)](tests/)
 
 An enterprise-grade **Multi-Agent AI System** built with **Google Agent Development Kit (ADK)** and **Gemini 2.5** to audit e-commerce brand catalogs, discover shopper search intent, benchmark live competitor listings, and synthesize multi-channel merchandising strategies through a **Generator-Critic Reflection Loop**.
 
@@ -31,10 +31,10 @@ flowchart TD
     Pipeline --> L3[3. Search Synonyms]
     Pipeline --> L4[4. Marketplace / Ad Feeds]
 
-    L1 --- D1["IKEA.com Display: 'BILLY' + Subtitle 'Bookcase, white, 31x11x79 in.'"]
-    L2 --- D2["HTML &lt;title&gt;: 'BILLY Bookcase (White, 79 in.) | Tall Bookshelf Storage | IKEA'"]
-    L3 --- D3["Elasticsearch Synonyms: 'bookshelf', 'tall white bookcase', 'adjustable shelf unit'"]
-    L4 --- D4["Google Shopping Feed: 'IKEA BILLY - 79 in. Modern Bookshelf with Adjustable Shelves, White'"]
+    L1 --- D1["IKEA.com Display: 'BILLY' + Subtitle 'Bookcase, white, 31x11x79\"'"]
+    L2 --- D2["HTML &lt;title&gt;: 'BILLY Bookcase (White, 79\") | Tall Bookshelf Storage | IKEA'"]
+    L3 --- D3["Elasticsearch Synonyms: ['bookshelf', 'tall white bookcase', 'adjustable shelf unit']"]
+    L4 --- D4["Google Shopping Feed: 'IKEA BILLY - 79\" Modern Bookshelf with Adjustable Shelves, White'"]
 ```
 
 ---
@@ -96,7 +96,7 @@ flowchart TD
     end
 
     CompRoot -->|5. Deliver Audited Deliverables| Reporter[Report Exporter Engine]
-    Reporter -->|Export .md & .html| Output[Executive Optimization Report]
+    Reporter -->|Export .md, .html, JSON-LD, TSV| Output[Full-Stack Deliverables]
 ```
 
 ---
@@ -133,6 +133,8 @@ python3 run_analysis.py --brand "IKEA"
 Outputs are automatically generated in `reports/`:
 - **Markdown Report**: `reports/ikea_brand_optimization_report.md`
 - **Styled HTML Report**: `reports/ikea_brand_optimization_report.html`
+- **Schema.org JSON-LD**: `reports/ikea_product_schema.json`
+- **Google Merchant Center TSV Feed**: `reports/google_merchant_feed.tsv`
 
 ---
 
@@ -142,6 +144,52 @@ Outputs are automatically generated in `reports/`:
 ```bash
 python3 -m unittest discover tests
 python3 -m unittest discover eval
+```
+
+---
+
+## 📁 Repository Structure
+
+```
+adk-ikea-brand-analysis/
+├── README.md                      # Project documentation and architecture guide
+├── pyproject.toml                 # Package configuration & dependencies
+├── .env.example                   # Environment configuration template
+├── run_analysis.py                # Standalone CLI analysis runner
+│
+├── brand_search_optimization/     # Core Agentic Package
+│   ├── __init__.py
+│   ├── agent.py                   # Root Coordinator Agent
+│   ├── prompt.py                  # Root supervisor system prompts
+│   ├── shared_libraries/
+│   │   ├── __init__.py
+│   │   └── constants.py           # Configuration & constants
+│   ├── sub_agents/
+│   │   ├── keyword_finding/       # Sub-Agent 1: Catalog querying & intent mining
+│   │   ├── search_results/        # Sub-Agent 2: Browser & competitor search benchmarking
+│   │   └── comparison/            # Sub-Agent 3: Generator-Critic reflection loop
+│   └── tools/
+│       ├── __init__.py
+│       ├── catalog_connector.py   # Hybrid Local JSON & BigQuery data connector
+│       ├── metrics.py             # Mathematical Query Recall ($R_{query}$) engine
+│       ├── structured_data_generator.py # Schema.org JSON-LD & Merchant Feed generator
+│       ├── web_search.py          # Selenium browser tooling & search fallback
+│       └── report_exporter.py     # Markdown and HTML report generation
+│
+├── data/
+│   └── ikea_catalog.json          # Curated real IKEA product catalog dataset
+├── reports/
+│   ├── ikea_brand_optimization_report.md    # Pre-generated case study report
+│   ├── ikea_brand_optimization_report.html  # Styled HTML report
+│   ├── ikea_product_schema.json             # Compliant Schema.org/Product JSON-LD
+│   └── google_merchant_feed.tsv             # Google Shopping / Merchant Center feed
+├── eval/
+│   ├── eval_data.json             # Ground-truth evaluation dataset (15 queries)
+│   └── test_eval.py               # Automated evaluation tests
+└── tests/
+    ├── test_catalog.py            # Unit tests for catalog connector
+    ├── test_agents.py             # Unit tests for agent hierarchy & tools
+    └── test_structured_data.py    # Unit tests for Schema.org & TSV feeds
 ```
 
 ---
