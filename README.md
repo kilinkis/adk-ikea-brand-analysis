@@ -31,10 +31,10 @@ flowchart TD
     Pipeline --> L3[3. Search Synonyms]
     Pipeline --> L4[4. Marketplace / Ad Feeds]
 
-    L1 --- D1["IKEA.com Display: 'BILLY' + Subtitle 'Bookcase, white, 31x11x79\"'"]
-    L2 --- D2["HTML &lt;title&gt;: 'BILLY Bookcase (White, 79\") | Tall Bookshelf Storage | IKEA'"]
-    L3 --- D3["Elasticsearch Synonyms: ['bookshelf', 'tall white bookcase', 'adjustable shelf unit']"]
-    L4 --- D4["Google Shopping Feed: 'IKEA BILLY - 79\" Modern Bookshelf with Adjustable Shelves, White'"]
+    L1 --- D1["IKEA.com Display: 'BILLY' + Subtitle 'Bookcase, white, 31x11x79 in.'"]
+    L2 --- D2["HTML &lt;title&gt;: 'BILLY Bookcase (White, 79 in.) | Tall Bookshelf Storage | IKEA'"]
+    L3 --- D3["Elasticsearch Synonyms: 'bookshelf', 'tall white bookcase', 'adjustable shelf unit'"]
+    L4 --- D4["Google Shopping Feed: 'IKEA BILLY - 79 in. Modern Bookshelf with Adjustable Shelves, White'"]
 ```
 
 ---
