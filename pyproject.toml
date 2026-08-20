@@ -55,6 +55,3 @@ ignore = ["E501"]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 
-[tool.vercel]
-entrypoint = "app.py"
-

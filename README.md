@@ -60,13 +60,16 @@ The project includes an interactive web application featuring:
 - **Live Search Simulator**: Test any search query in real-time with instant token recall scoring.
 - **1-Click Schema.org JSON-LD & TSV Export**: Copy compliant structured data code directly to clipboard.
 
-### 🌐 Running the Dashboard Locally
+### 🌐 Running the Frontend Dashboard Locally
 ```bash
-# Start a local web server (from project root):
-python3 -m http.server 3000
+# Install frontend dependencies:
+pnpm install
 
-# Open in your browser:
-# http://localhost:3000/
+# Start Vite development server:
+pnpm dev
+
+# Build for production:
+pnpm build
 ```
 
 ---
