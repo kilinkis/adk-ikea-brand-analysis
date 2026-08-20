@@ -1,12 +1,13 @@
 # 🛋️ Brand Search Optimization & Product Title Enrichment (IKEA Case Study)
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![React 18](https://img.shields.io/badge/Frontend-React%2018%20%2B%20Highcharts-61DAFB.svg)](dashboard/)
 [![Google ADK](https://img.shields.io/badge/Google-ADK%20(Agent%20Development%20Kit)-4285F4.svg)](https://github.com/google/adk-samples)
 [![Gemini 2.5 Flash](https://img.shields.io/badge/Model-Gemini%202.5%20Flash-orange.svg)](https://ai.google.dev/)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Tests: Passing](https://img.shields.io/badge/tests-12%20passed-brightgreen.svg)](tests/)
 
-An enterprise-grade **Multi-Agent AI System** built with **Google Agent Development Kit (ADK)** and **Gemini 2.5** to audit e-commerce brand catalogs, discover shopper search intent, benchmark live competitor listings, and synthesize multi-channel merchandising strategies through a **Generator-Critic Reflection Loop**.
+An enterprise-grade **Multi-Agent AI System** built with **Google Agent Development Kit (ADK)** and **Gemini 2.5** to audit e-commerce brand catalogs, discover shopper search intent, benchmark live competitor listings, and synthesize multi-channel merchandising strategies through a **Generator-Critic Reflection Loop** — complete with an interactive **React + Highcharts Web Dashboard**.
 
 ---
 
@@ -36,6 +37,34 @@ flowchart TD
     L3 --- D3["Elasticsearch Synonyms: ['bookshelf', 'tall white bookcase', 'adjustable shelf unit']"]
     L4 --- D4["Google Shopping Feed: 'IKEA BILLY - 79\" Modern Bookshelf with Adjustable Shelves, White'"]
 ```
+
+---
+
+## 🖥️ Interactive React + Highcharts Web Dashboard
+
+![IKEA Brand Search Optimization Dashboard](assets/dashboard_preview.jpg)
+
+The project includes an interactive web application in [`dashboard/`](dashboard/index.html) featuring:
+- **Highcharts Analytics**: Interactive multi-series column charts for Query Token Recall ($R_{\text{query}}$) and spiderweb/radar charts for dimensional attribute coverage.
+- **Product Switcher**: Explore merchandising strategies across *BILLY*, *POÄNG*, *KALLAX*, *MALM*, and *STRANDMON*.
+- **4-Layer Matrix Tabs**: Toggle between D2C UI, Google SERP snippet previews, Algolia search synonyms, and Google Shopping ad feeds.
+- **Live Search Simulator**: Test any search query in real-time with instant token recall scoring.
+- **1-Click Schema.org JSON-LD & TSV Export**: Copy compliant structured data code directly to clipboard.
+
+### 🌐 Running the Dashboard Locally
+```bash
+# Start a local web server (from project root):
+python3 -m http.server 3000
+
+# Open in your browser:
+# http://localhost:3000/dashboard/
+```
+
+### ☁️ Free 1-Click Deployment to Vercel
+1. Push this repository to your GitHub account.
+2. Go to [Vercel.com](https://vercel.com) and click **"Add New Project"** -> Select `adk-ikea-brand-analysis`.
+3. Click **"Deploy"** (Configuration is pre-set via [`vercel.json`](vercel.json)).
+4. Your live React dashboard will be deployed at `https://your-project.vercel.app`!
 
 ---
 
@@ -101,30 +130,17 @@ flowchart TD
 
 ---
 
-## 🚀 Quickstart & Usage
+## 🚀 CLI Quickstart
 
 ### 1. Clone & Install
 
 ```bash
 git clone https://github.com/your-username/adk-ikea-brand-analysis.git
 cd adk-ikea-brand-analysis
+pip install -e .
 ```
 
-Install dependencies using `uv` or `pip`:
-
-```bash
-uv sync
-# Or: pip install -e .
-```
-
-### 2. Configure Environment
-
-```bash
-cp .env.example .env
-```
-Set your `GOOGLE_API_KEY` from [Google AI Studio](https://aistudio.google.com).
-
-### 3. Run Analysis via CLI
+### 2. Run Analysis via CLI
 
 ```bash
 python3 run_analysis.py --brand "IKEA"
@@ -140,7 +156,6 @@ Outputs are automatically generated in `reports/`:
 
 ## 🧪 Testing & Evaluation
 
-### Run All Tests & Evaluation Benchmarks
 ```bash
 python3 -m unittest discover tests
 python3 -m unittest discover eval
@@ -154,22 +169,20 @@ python3 -m unittest discover eval
 adk-ikea-brand-analysis/
 ├── README.md                      # Project documentation and architecture guide
 ├── pyproject.toml                 # Package configuration & dependencies
+├── vercel.json                    # 1-click Vercel deployment configuration
 ├── .env.example                   # Environment configuration template
 ├── run_analysis.py                # Standalone CLI analysis runner
+│
+├── dashboard/                     # React + Highcharts Web Dashboard
+│   └── index.html                 # Complete interactive React SPA
 │
 ├── brand_search_optimization/     # Core Agentic Package
 │   ├── __init__.py
 │   ├── agent.py                   # Root Coordinator Agent
 │   ├── prompt.py                  # Root supervisor system prompts
-│   ├── shared_libraries/
-│   │   ├── __init__.py
-│   │   └── constants.py           # Configuration & constants
-│   ├── sub_agents/
-│   │   ├── keyword_finding/       # Sub-Agent 1: Catalog querying & intent mining
-│   │   ├── search_results/        # Sub-Agent 2: Browser & competitor search benchmarking
-│   │   └── comparison/            # Sub-Agent 3: Generator-Critic reflection loop
+│   ├── shared_libraries/          # Configuration & constants
+│   ├── sub_agents/                # Keyword Finder, Search Agent, Comparison Reflection Loop
 │   └── tools/
-│       ├── __init__.py
 │       ├── catalog_connector.py   # Hybrid Local JSON & BigQuery data connector
 │       ├── metrics.py             # Mathematical Query Recall ($R_{query}$) engine
 │       ├── structured_data_generator.py # Schema.org JSON-LD & Merchant Feed generator
@@ -178,18 +191,8 @@ adk-ikea-brand-analysis/
 │
 ├── data/
 │   └── ikea_catalog.json          # Curated real IKEA product catalog dataset
-├── reports/
-│   ├── ikea_brand_optimization_report.md    # Pre-generated case study report
-│   ├── ikea_brand_optimization_report.html  # Styled HTML report
-│   ├── ikea_product_schema.json             # Compliant Schema.org/Product JSON-LD
-│   └── google_merchant_feed.tsv             # Google Shopping / Merchant Center feed
-├── eval/
-│   ├── eval_data.json             # Ground-truth evaluation dataset (15 queries)
-│   └── test_eval.py               # Automated evaluation tests
-└── tests/
-    ├── test_catalog.py            # Unit tests for catalog connector
-    ├── test_agents.py             # Unit tests for agent hierarchy & tools
-    └── test_structured_data.py    # Unit tests for Schema.org & TSV feeds
+├── reports/                       # Full-stack deliverables (HTML, MD, JSON-LD, TSV)
+└── tests/                         # Unit tests and mathematical evaluation suites
 ```
 
 ---
