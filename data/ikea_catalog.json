@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ikea-001",
+    "title": "BILLY Bookcase",
+    "brand": "IKEA",
+    "category": "Bookcases & Shelving",
+    "description": "A simple unit can be enough storage for a limited space or the foundation for a larger storage solution if your needs change. Adjustable shelves; adapt space between shelves according to your needs. Surface made from natural wood veneer.",
+    "attributes": "Color: White, Dimensions: 31 1/2x11x79 1/2 \", Material: Particleboard, Paper foil, Plastic edging",
+    "price": "$79.99",
+    "sku": "002.638.50"
+  },
+  {
+    "id": "ikea-002",
+    "title": "POÄNG Armchair",
+    "brand": "IKEA",
+    "category": "Armchairs & Accent Chairs",
+    "description": "Layer-glued bent birch frame gives comfortable resilience. High back gives good support for your neck. A variety of cushion designs makes it easy to change the look of your POÄNG and your living room.",
+    "attributes": "Color: Birch veneer/Knisa light beige, Dimensions: 26 3/4x32 1/4x39 3/8 \", Material: Layer-glued frame, 100% polyester cover",
+    "price": "$129.00",
+    "sku": "292.407.96"
+  },
+  {
+    "id": "ikea-003",
+    "title": "KALLAX Shelf Unit",
+    "brand": "IKEA",
+    "category": "Cube Storage & Room Dividers",
+    "description": "Standing or lying, against the wall or to divide the room – KALLAX series is eager to please and will adapt to your taste, space, budget and needs. Fine tune with drawers, shelves, boxes and inserts.",
+    "attributes": "Color: Black-brown, Dimensions: 57 7/8x57 7/8 \", Configuration: 4x4 16-Cube, Material: Particleboard, Fiberboard, Acrylic paint",
+    "price": "$149.99",
+    "sku": "104.099.32"
+  },
+  {
+    "id": "ikea-004",
+    "title": "MALM Bed Frame, High",
+    "brand": "IKEA",
+    "category": "Beds & Bed Frames",
+    "description": "A clean design with solid wood veneer that is just as beautiful on all sides. Place the bed freestanding or with the headboard against a wall. Add spacious MALM bed storage boxes underneath.",
+    "attributes": "Size: Queen, Color: White stained oak veneer, Dimensions: 66 1/8x83 1/8x39 3/8 \", Material: Wood veneer",
+    "price": "$299.00",
+    "sku": "890.094.84"
+  },
+  {
+    "id": "ikea-005",
+    "title": "STRANDMON Wing Chair",
+    "brand": "IKEA",
+    "category": "Living Room Seating",
+    "description": "You can really relax and unwind in comfort, because the high back on this chair provides extra support for your neck. Classic 1950s look with modern comfort and durable tactile fabric.",
+    "attributes": "Color: Nordvalla dark gray, Dimensions: 32 1/4x37 3/4x39 3/4 \", Material: Solid wood frame, High-resilience polyurethane foam",
+    "price": "$279.00",
+    "sku": "903.598.29"
+  },
+  {
+    "id": "ikea-006",
+    "title": "LACK Side Table",
+    "brand": "IKEA",
+    "category": "Tables & Desks",
+    "description": "A clean, minimalist side table that is easy to assemble, lift and move around. Fits perfectly next to sofas, beds, or in reading corners.",
+    "attributes": "Color: White, Dimensions: 21 5/8x21 5/8x17 3/4 \", Material: Particleboard, Honeycomb structure paper filling",
+    "price": "$14.99",
+    "sku": "304.499.08"
+  },
+  {
+    "id": "ikea-007",
+    "title": "PAX Wardrobe Frame",
+    "brand": "IKEA",
+    "category": "Wardrobes & Closet Systems",
+    "description": "Customize your dream closet with PAX modular wardrobe frames. Combine with KOMPLEMENT interior organizers to fit your personal collection of clothes, shoes and accessories.",
+    "attributes": "Color: White, Dimensions: 39 3/8x22 7/8x92 7/8 \", Material: Particleboard, Melamine foil",
+    "price": "$115.00",
+    "sku": "502.145.60"
+  },
+  {
+    "id": "ikea-008",
+    "title": "HEMNES 8-Drawer Dresser",
+    "brand": "IKEA",
+    "category": "Dressers & Storage",
+    "description": "A classic solid pine chest of drawers with a traditional look and modern functionality. Smooth running drawers with pull-out stops.",
+    "attributes": "Color: White stain, Dimensions: 63x37 3/8x19 5/8 \", Material: Solid pine, Clear acrylic lacquer",
+    "price": "$349.99",
+    "sku": "903.186.06"
+  }
+]

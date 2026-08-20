@@ -1,0 +1,52 @@
+[
+  {
+    "eval_id": "eval-ikea-billy",
+    "brand": "IKEA",
+    "product": "BILLY Bookcase",
+    "expected_keywords": [
+      "white bookshelf",
+      "adjustable shelves",
+      "tall bookcase",
+      "modern storage"
+    ],
+    "required_title_elements": [
+      "BILLY",
+      "Bookcase",
+      "79\"",
+      "Adjustable Shelves",
+      "White"
+    ]
+  },
+  {
+    "eval_id": "eval-ikea-poang",
+    "brand": "IKEA",
+    "product": "POÄNG Armchair",
+    "expected_keywords": [
+      "scandinavian lounge chair",
+      "bentwood accent chair",
+      "neck support"
+    ],
+    "required_title_elements": [
+      "POÄNG",
+      "Armchair",
+      "Bentwood",
+      "Lounge Chair"
+    ]
+  },
+  {
+    "eval_id": "eval-ikea-kallax",
+    "brand": "IKEA",
+    "product": "KALLAX Shelf Unit",
+    "expected_keywords": [
+      "cube storage organizer",
+      "16-cube",
+      "room divider shelf"
+    ],
+    "required_title_elements": [
+      "KALLAX",
+      "16-Cube",
+      "Modular Storage",
+      "Room Divider"
+    ]
+  }
+]
