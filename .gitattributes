@@ -1,0 +1,10 @@
+# Exclude generated reports and HTML files from GitHub language statistics
+reports/** linguist-documentation
+reports/*.html linguist-documentation
+*.html linguist-detectable=false
+*.tsv linguist-documentation
+
+# Ensure TypeScript and Python are explicitly counted
+*.tsx linguist-detectable=true
+*.ts linguist-detectable=true
+*.py linguist-detectable=true
