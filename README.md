@@ -51,7 +51,7 @@ flowchart TD
 
 🌐 **Live Demo**: [**https://adk-ikea-brand-analysis.vercel.app/**](https://adk-ikea-brand-analysis.vercel.app/)
 
-![IKEA Brand Search Optimization Dashboard](assets/dashboard_preview.png)
+![IKEA Brand Search Optimization Dashboard](assets/dashboard_preview.jpg)
 
 The project includes an interactive web application featuring:
 - **Highcharts Analytics**: Interactive multi-series column charts for Query Token Recall ($R_{\text{query}}$) and spiderweb/radar charts for dimensional attribute coverage.
