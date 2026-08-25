@@ -24,7 +24,8 @@ export const MerchandisingMatrix: React.FC<MerchandisingMatrixProps> = ({ produc
         <div className="flex bg-slate-200/70 p-1 rounded-lg gap-1 text-xs font-semibold">
           <button
             onClick={() => setActiveLayer(1)}
-            className={`px-3 py-1.5 rounded-md transition ${
+            aria-pressed={activeLayer === 1}
+            className={`motion-press motion-selection px-3 py-1.5 rounded-md ${
               activeLayer === 1 ? 'bg-white text-ikea-blue shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -32,7 +33,8 @@ export const MerchandisingMatrix: React.FC<MerchandisingMatrixProps> = ({ produc
           </button>
           <button
             onClick={() => setActiveLayer(2)}
-            className={`px-3 py-1.5 rounded-md transition ${
+            aria-pressed={activeLayer === 2}
+            className={`motion-press motion-selection px-3 py-1.5 rounded-md ${
               activeLayer === 2 ? 'bg-white text-ikea-blue shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -40,7 +42,8 @@ export const MerchandisingMatrix: React.FC<MerchandisingMatrixProps> = ({ produc
           </button>
           <button
             onClick={() => setActiveLayer(3)}
-            className={`px-3 py-1.5 rounded-md transition ${
+            aria-pressed={activeLayer === 3}
+            className={`motion-press motion-selection px-3 py-1.5 rounded-md ${
               activeLayer === 3 ? 'bg-white text-ikea-blue shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -48,7 +51,8 @@ export const MerchandisingMatrix: React.FC<MerchandisingMatrixProps> = ({ produc
           </button>
           <button
             onClick={() => setActiveLayer(4)}
-            className={`px-3 py-1.5 rounded-md transition ${
+            aria-pressed={activeLayer === 4}
+            className={`motion-press motion-selection px-3 py-1.5 rounded-md ${
               activeLayer === 4 ? 'bg-white text-ikea-blue shadow-sm' : 'text-slate-600 hover:text-slate-900'
             }`}
           >

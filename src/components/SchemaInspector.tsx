@@ -53,7 +53,7 @@ export const SchemaInspector: React.FC<SchemaInspectorProps> = ({ product }) => 
         </div>
         <button
           onClick={copyToClipboard}
-          className="px-3 py-1.5 bg-ikea-blue hover:bg-blue-600 text-white rounded-lg text-xs font-semibold transition flex items-center gap-1.5"
+          className={`motion-press px-3 py-1.5 bg-ikea-blue hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 ${copied ? 'motion-confirm' : ''}`}
         >
           {copied ? (
             <>

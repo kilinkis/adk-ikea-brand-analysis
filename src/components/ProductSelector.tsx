@@ -21,7 +21,8 @@ export const ProductSelector: React.FC<ProductSelectorProps> = ({
             <button
               key={p.id}
               onClick={() => onSelect(p)}
-              className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${
+              aria-pressed={selectedProduct.id === p.id}
+              className={`motion-press motion-selection px-3 py-1.5 text-xs font-semibold rounded-lg ${
                 selectedProduct.id === p.id
                   ? 'bg-ikea-blue text-white shadow-sm ring-2 ring-ikea-blue/30'
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
