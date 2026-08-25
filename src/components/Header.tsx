@@ -16,14 +16,14 @@ export const Header: React.FC = () => {
         </div>
         <div className="flex items-center gap-3">
           <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs px-3 py-1 rounded-full font-medium flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
             ADK Agents Active (Critic Satisfied)
           </span>
           <a
             href="https://github.com/kilinkis/adk-ikea-brand-analysis"
             target="_blank"
             rel="noreferrer"
-            className="bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1.5 rounded transition border border-white/20 font-medium flex items-center gap-1.5"
+            className="motion-press bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1.5 rounded border border-white/20 font-medium flex items-center gap-1.5"
           >
             <FileText className="w-3.5 h-3.5" />
             GitHub Repo

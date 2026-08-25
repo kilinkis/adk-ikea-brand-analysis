@@ -61,7 +61,7 @@ export const SearchSimulator: React.FC<SearchSimulatorProps> = ({ product }) => 
         <div className="text-right">
           <span className="text-xs font-bold text-slate-500">Match Score: </span>
           <span
-            className={`text-lg font-black ${
+            className={`motion-score text-lg font-black ${
               simResults.score >= 70 ? 'text-emerald-600' : 'text-amber-600'
             }`}
           >
@@ -80,7 +80,7 @@ export const SearchSimulator: React.FC<SearchSimulatorProps> = ({ product }) => 
         />
         <button
           onClick={() => setSearchQuery('79 inch tall white bookshelf with adjustable shelves')}
-          className="px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold transition flex items-center gap-1.5"
+          className="motion-press px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold flex items-center gap-1.5"
         >
           <RefreshCw className="w-3.5 h-3.5" />
           Reset Example
